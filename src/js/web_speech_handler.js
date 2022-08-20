@@ -5,6 +5,7 @@ const SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 recognition.lang = "pt-br";
 recognition.start();
+var fimDeJogo = false;
 const speechBox = document.getElementById("speech-box");
 recognition.addEventListener("result", (chute) => {
     const chuteTexto = chute.results[0][0].transcript;
@@ -20,6 +21,7 @@ recognition.addEventListener("result", (chute) => {
         if (chuteNum == numeroSecreto) {
             speechBox?.classList.add("borda-verde");
             mostrarDica("vitoria");
+            fimDeJogo = true;
         }
         else if (chuteNum < numeroSecreto) {
             mostrarDica("baixo");
@@ -29,3 +31,5 @@ recognition.addEventListener("result", (chute) => {
         }
     }
 });
+recognition.addEventListener("end", () => { if (!fimDeJogo)
+    recognition.start(); });

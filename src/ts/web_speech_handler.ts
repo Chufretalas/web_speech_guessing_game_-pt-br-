@@ -8,6 +8,8 @@ const recognition = new SpeechRecognition()
 recognition.lang = "pt-br"
 recognition.start()
 
+var fimDeJogo = false
+
 const speechBox = document.getElementById("speech-box")
 
 recognition.addEventListener("result", (chute) => {
@@ -15,7 +17,7 @@ recognition.addEventListener("result", (chute) => {
     speechBox!.innerText = chuteTexto
     console.log(chuteTexto)
     speechBox?.classList.remove("borda-vermelha", "borda-verde")
-    if(!validaChute(chuteTexto)) {
+    if (!validaChute(chuteTexto)) {
         speechBox?.classList.add("borda-vermelha")
         mostrarDica("invalido")
     } else {
@@ -23,6 +25,7 @@ recognition.addEventListener("result", (chute) => {
         if (chuteNum == numeroSecreto) {
             speechBox?.classList.add("borda-verde")
             mostrarDica("vitoria")
+            fimDeJogo = true
         } else if (chuteNum < numeroSecreto) {
             mostrarDica("baixo")
         } else if (chuteNum > numeroSecreto) {
@@ -30,3 +33,5 @@ recognition.addEventListener("result", (chute) => {
         }
     }
 })
+
+recognition.addEventListener("end", () => { if (!fimDeJogo) recognition.start() })
