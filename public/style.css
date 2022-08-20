@@ -55,3 +55,15 @@ h3 {
 .accent-text {
     color: var(--accent-color);
 }
+
+.invisivel {
+    display: none;
+}
+
+.borda-verde {
+    border-color: rgb(101, 234, 126);
+}
+
+.borda-vermelha {
+    border-color: rgb(234, 101, 101);
+}
