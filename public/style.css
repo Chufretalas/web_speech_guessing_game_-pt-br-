@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+/* color pallet -> https://colorhunt.co/palette/222831393e46ffd369eeeeee */
+
+:root {
+    --font-family: 'Bree Serif', serif;
+    --bg-color: #30343b;
+    --on-bg-color: #222831;
+    --accent-color: #FFD369;
+    --primary-color: #ededed;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0.2em 0;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.separador {
+    width: 30vw;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+}
+
+.mensagem {
+    font-size: 1.5em;
+}
+
+.box {
+    background-color: var(--on-bg-color);
+    border: 4px solid var(--accent-color);
+    border-radius: 0.5em;
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-size: 1.7em;
+    hoi
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
