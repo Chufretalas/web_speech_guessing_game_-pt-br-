@@ -10,7 +10,6 @@ const speechBox = document.getElementById("speech-box");
 recognition.addEventListener("result", (chute) => {
     const chuteTexto = chute.results[0][0].transcript;
     speechBox.innerText = chuteTexto;
-    console.log(chuteTexto);
     speechBox?.classList.remove("borda-vermelha", "borda-verde");
     if (!validaChute(chuteTexto)) {
         speechBox?.classList.add("borda-vermelha");
@@ -19,10 +18,7 @@ recognition.addEventListener("result", (chute) => {
     else {
         const chuteNum = +chuteTexto;
         if (chuteNum == numeroSecreto) {
-            speechBox?.classList.add("borda-verde");
-            mostrarDica("vitoria");
-            fimDeJogo = true;
-            document.getElementById("botao-recarregar").classList.remove("invisivel");
+            lidarComAVitoria();
         }
         else if (chuteNum < numeroSecreto) {
             mostrarDica("baixo");
@@ -34,3 +30,9 @@ recognition.addEventListener("result", (chute) => {
 });
 recognition.addEventListener("end", () => { if (!fimDeJogo)
     recognition.start(); });
+function lidarComAVitoria() {
+    speechBox?.classList.add("borda-verde");
+    mostrarDica("vitoria");
+    fimDeJogo = true;
+    document.getElementById("botao-recarregar").classList.remove("invisivel");
+}

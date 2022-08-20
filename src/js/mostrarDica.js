@@ -4,7 +4,6 @@ const chuteAltoStr = `O número secreto é menor <i class="fa-solid fa-arrow-dow
 const vitoriaStr = `Você acertou! <i class="fa-solid fa-trophy"></i>`;
 const dicaElement = document.getElementById("dica");
 export default function mostrarDica(label) {
-    console.log(`label: ${label}`);
     dicaElement?.classList.remove("invisivel");
     switch (label) {
         case "invalido":
