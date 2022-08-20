@@ -22,6 +22,7 @@ recognition.addEventListener("result", (chute) => {
             speechBox?.classList.add("borda-verde");
             mostrarDica("vitoria");
             fimDeJogo = true;
+            document.getElementById("botao-recarregar").classList.remove("invisivel");
         }
         else if (chuteNum < numeroSecreto) {
             mostrarDica("baixo");
