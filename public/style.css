@@ -49,7 +49,7 @@ h3 {
     margin: 0.5em;
     padding: 0.5em;
     font-size: 1.7em;
-    hoi
+    max-width: 40vw;
 }
 
 .accent-text {

@@ -15,14 +15,17 @@
 
     <body>
         <h1>Acerte o número secreto</h1>
-        <h3>O número secreto está entre <span id="menor-valor" class="accent-text"></span> e <span id="maior-valor" class="accent-text"></span></h3>
+        <h3>O número secreto está entre <span id="menor-valor" class="accent-text">?</span> e <span id="maior-valor" class="accent-text">?</span></h3>
         <hr class="separador">
         <div id="chute" class="mensagem">
             <div>Você disse:</div>
-            <span class="box">20</span>
+            <span class="box" id="speech-box"> ... </span>
             <div>O número secreto é maior <i class="fa-solid fa-arrow-up"></i></div>
         </div>
-        <script src="../src/js/index.js"></script>
+        <script type="module" src="../src/js/index.js"></script>
+        <script type="module" src="../src/js/sorteia_numero.js"></script>
+        <script type="module" src="../src/js/web_speech_handler.js"></script>
+        <script type="module" src="../src/js/validacao.js"></script>
     </body>
 
 </html>
