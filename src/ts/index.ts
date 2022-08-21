@@ -1,3 +1,9 @@
+// Webpack imports
+import "./mostrarDica.js"
+import "./sorteia_numero.js"
+import "./validacao.js"
+import "./web_speech_handler.js"
+
 import sorteiaAleatorio from "./sorteia_numero.js"
 
 export const menorValor = 0
