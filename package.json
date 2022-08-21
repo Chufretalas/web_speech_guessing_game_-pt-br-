@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "tsc_watch": "tsc -w"
   },
   "devDependencies": {
     "typescript": "^4.7.4",
