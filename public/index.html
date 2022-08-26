@@ -15,14 +15,15 @@
 
     <body>
         <h1>Acerte o número secreto</h1>
-        <h3>O número secreto está entre <span id="menor-valor" class="accent-text">?</span> e <span id="maior-valor" class="accent-text">?</span></h3>
-        <hr class="separador">
-        <div id="chute" class="mensagem">
+        <h3>O número secreto está entre <span id="min-value" class="accent-text">?</span> e <span id="max-value"
+                class="accent-text">?</span></h3>
+        <hr class="separator">
+        <div class="input-wrapper">
             <div>Você disse:</div>
-            <span class="box" id="speech-box"> ... </span>
-            <div id="dica" class="invisivel"></div>
+            <span class="speech-box" id="speech-box"> ... </span>
+            <div id="dica" class="invisible"></div>
         </div>
-        <button class="botao-daora invisivel" id="botao-recarregar">Jogar novamente?</button>
+        <button class="cool-button invisible" id="reload-button">Jogar novamente?</button>
         <script src="../src/dist/bundled.js"></script>
     </body>
 
