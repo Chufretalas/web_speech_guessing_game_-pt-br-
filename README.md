@@ -15,7 +15,9 @@ And, as you might have guessed by the title, this project was made in brazilian 
 2. Then run `python -m venv ./server_venv` to create the virtual enviroment.
 3. Next run `.\server_venv\Scripts\Activate.ps1` (for powershell) or `.\server_venv\Scripts\activate.bat` (for regular cmd) to activate the venv.
 4. To install the dependencies run `pip install -r requirements.txt`.  
-5. And, at last, run `python .\app.py` to launch the app and type **localhost:5000** on your browser to use the app.  
+5. And, at last, run `python .\app.py` to launch the app and type **localhost:5000** on your browser to use the app.
+
+- Subsequently you will only need to activate the venv (step 3) and run the app (step 5).
 
 > If you wish to stop the application type CTRL+C on the terminal that is running the server.
 ---
@@ -23,7 +25,6 @@ And, as you might have guessed by the title, this project was made in brazilian 
 > To Edit the code you will need **python and node.js** installed
 1. To set up the python back-end follow the steps 1 to 4 in the *Running the app* section.
 2. Now, to get the node dependencies, run `npm install` in the same root directory mentioned in the *Running the app* section.
-3. To edit the typescript run `npm run tsc_watch` to automaticaly compile to javascript.
-4. And to build your changes, run `npm run build`.  
+3. To automatically compile typescript and build the webpack bundle run `npm run dev`.
 5. After that run `python .\app.py` to launch the server.  
 > Be sure to import all new typescript files in index.ts, just like it is being done to the others, so webpack knows which files to pack.
