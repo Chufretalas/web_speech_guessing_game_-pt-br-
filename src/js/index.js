@@ -8,7 +8,7 @@ import getRandomNumber from "./get_random_number.js";
 import setUiMinMax from "./set_ui_min_max.js";
 import runWebSpeech from "./run_web_speech.js";
 export const minValue = 0;
-export const maxValue = 100;
+export const maxValue = 1000;
 export const secretNumber = getRandomNumber(minValue, maxValue);
 setUiMinMax(minValue, maxValue);
 runWebSpeech();
