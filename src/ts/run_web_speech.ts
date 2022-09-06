@@ -10,7 +10,10 @@ export default function runWebSpeech() {
     recognition.start()
 
     recognition.addEventListener("result", (guess) => {
-        const guessString = guess.results[0][0].transcript as string
+        let guessString = guess.results[0][0].transcript as string
+
+        //sometimes web speech understand negative numbers with a whitespace between the - and the number
+        if (guessString.startsWith("- ")) guessString = guessString.replaceAll(" ", "")
 
         if (analyzeGuess(guessString)) {
             victory = true

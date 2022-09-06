@@ -6,7 +6,10 @@ export default function runWebSpeech() {
     recognition.lang = "pt-br";
     recognition.start();
     recognition.addEventListener("result", (guess) => {
-        const guessString = guess.results[0][0].transcript;
+        let guessString = guess.results[0][0].transcript;
+        //sometimes web speech understand negative numbers with a whitespace between the - and the number
+        if (guessString.startsWith("- "))
+            guessString = guessString.replaceAll(" ", "");
         if (analyzeGuess(guessString)) {
             victory = true;
             document.getElementById("reload-button").classList.remove("invisible");
